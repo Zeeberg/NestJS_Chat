@@ -1,0 +1,22 @@
+@import "../styles/normalize.scss";
+@import "./fonts.scss";
+
+* {
+  font-family: "Google Sans";
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #ffffff;
+
+  &.no-scroll {
+    overflow: hidden;
+  }
+}
+
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 64px;
+}

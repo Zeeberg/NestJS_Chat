@@ -1,0 +1,35 @@
+.chat-wrapper {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+}
+
+.user-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.control {
+  display: flex;
+
+  input {
+    flex-grow: 1;
+  }
+}
+.messages__info,
+.messages__info_own {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 0;
+  padding-right: 20px;
+  border-bottom: 1px solid rgba($color: #000000, $alpha: 0.5);
+  span {
+    font-weight: bold;
+  }
+}
+.messages__info_own {
+  margin-left: auto;
+  align-items: flex-end;
+}

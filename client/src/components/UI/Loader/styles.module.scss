@@ -1,0 +1,120 @@
+.loader {
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80px;
+  height: 80px;
+}
+.loader div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border: 8px solid rgb(217, 4, 41);
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: rgb(217, 4, 41) transparent transparent transparent;
+}
+.loader div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+.loader div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+.loader div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/**
+ * ==============================================
+ * Dot Pulse
+ * ==============================================
+ */
+.dot-pulse {
+  position: relative;
+  left: -9999px;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: rgb(217, 4, 41);
+  color: rgb(217, 4, 41);
+  box-shadow: 9999px 0 0 -5px rgb(217, 4, 41);
+  animation: dotPulse 1.5s infinite linear;
+  animation-delay: 0.25s;
+}
+
+.dot-pulse::before,
+.dot-pulse::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: rgb(217, 4, 41);
+  color: rgb(217, 4, 41);
+}
+
+.dot-pulse::before {
+  box-shadow: 9984px 0 0 -5px rgb(217, 4, 41);
+  animation: dotPulseBefore 1.5s infinite linear;
+  animation-delay: 0s;
+}
+
+.dot-pulse::after {
+  box-shadow: 10014px 0 0 -5px rgb(217, 4, 41);
+  animation: dotPulseAfter 1.5s infinite linear;
+  animation-delay: 0.5s;
+}
+
+@keyframes dotPulseBefore {
+  0% {
+    box-shadow: 9984px 0 0 -5px rgb(217, 4, 41);
+  }
+  30% {
+    box-shadow: 9984px 0 0 2px rgb(217, 4, 41);
+  }
+  60%,
+  100% {
+    box-shadow: 9984px 0 0 -5px rgb(217, 4, 41);
+  }
+}
+
+@keyframes dotPulse {
+  0% {
+    box-shadow: 9999px 0 0 -5px rgb(217, 4, 41);
+  }
+  30% {
+    box-shadow: 9999px 0 0 2px rgb(217, 4, 41);
+  }
+  60%,
+  100% {
+    box-shadow: 9999px 0 0 -5px rgb(217, 4, 41);
+  }
+}
+
+@keyframes dotPulseAfter {
+  0% {
+    box-shadow: 10014px 0 0 -5px rgb(217, 4, 41);
+  }
+  30% {
+    box-shadow: 10014px 0 0 2px rgb(217, 4, 41);
+  }
+  60%,
+  100% {
+    box-shadow: 10014px 0 0 -5px rgb(217, 4, 41);
+  }
+}
